@@ -1,0 +1,25 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %} <title> View_Department_Salaries</title>{% endblock %}
+{% block content %}
+    <div class="container">
+        <p></p>
+        <p></p>
+        <form method="POST" action="{% url 'extract_dept_salaries' %}" > {% csrf_token %} 
+        <div class="row">
+            <div class="col-md-3">
+               <label for="input_department_name" class="form-label">Enter Department Name</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="Enter Department Name" id="dName1" name="dname" >
+             </div>
+        </div>
+        <p></p>
+         <button type="submit" class="btn btn-primary" style="margin: auto; display:block;">View Records</button>
+        
+    </form>
+        
+    </div>
+   
+
+{% endblock %}

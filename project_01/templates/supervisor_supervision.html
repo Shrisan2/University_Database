@@ -1,0 +1,30 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %} <title> View_Supervisor_Supervision</title>{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h3 style="color: blue; font-family:revert; font-style:italic;">Manager Name and the total number of employees working for the manager</h3>
+    <div class="row gx-5">
+        <table class="table table-bordered">
+            <thread>
+                <tr>
+                    <th scope="col">First Name </th>
+                    <th scope="col">Middle Name </th>
+                    <th scope="col">Last Name </th>
+                    <th scope="col">Number of Employees</th>
+                </tr>
+            </thread>
+            <tbody>
+                {% for i in data %}
+                     <tr>
+                         <td>{{i.firstName}}</td>
+                         <td>{{i.middlename}}</td>
+                         <td>{{i.lastname}}</td>
+                         <td>{{i.Nofemp}}</td>
+                     </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

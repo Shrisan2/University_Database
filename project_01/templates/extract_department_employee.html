@@ -1,0 +1,32 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %} <title> Dept_Name_AND_Emp_</title>{% endblock %}
+{% block content %}
+   <div class="container-fluid">
+       <div class="row">
+           <h1>Department: </h1>
+       </div>
+       <div class="row gx-5">
+           <table class="table table-bordered">
+               <thread>
+                   <tr>
+                       <th scope="col">First Name </th>
+                       <th scope="col">Middle Initial </th>
+                       <th scope="col">Last Name </th>
+                       <th scope="col">Salary </th>
+                    </tr>
+               </thread>
+               <tbody>
+                   {% for i in data %}
+                        <tr>
+                            <td>{{i.Fname}}</td>
+                            <td>{{i.Minit}}</td>
+                            <td>{{i.Lname}}</td>
+                            <td>{{i.Salary}}</td>
+                        </tr>
+                   {% endfor %}
+               </tbody>
+           </table>
+       </div>
+   </div>
+{% endblock %}
